@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="autocomplete-search">
+    <label>Sailpoint</label>
+    <input [formControl]="searchControl" placeholder="Search Cities"
+          (keydown)="onKeyDown($event)"/>
+     <span><input class="clear-button" type="button" value="X" type="submit" (click)="clearSearch()"/></span>
+  </div>
+  <div class="autocomplete-suggest">
+    <div class="ac-result">
+      <ul *ngIf="cities$ | async as cities">
+        <li [ngStyle]="{'padding': cities.length > 0 ? '10px': '0px'}" *ngFor="let city of cities; let i = index"
+          [class.focused]="i === focusedItem"
+          (keydown)="onResultKeyDown($event, city, i)"
+          (click)="onSelectCity(city)">
+          <span data-test="city" [appHighlight]="city" [highlight]="searchControl.value"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

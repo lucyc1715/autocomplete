@@ -1,0 +1,110 @@
+.autocomplete-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 20px;
+}
+.autocomplete-search label {
+  font-size: 16px;
+  margin: 0 10px;
+}
+.autocomplete-search input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.autocomplete-search .clear-button {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.autocomplete-suggest {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.autocomplete-suggest .ac-result {
+  width: 100%;
+  margin: 0 0 0 80px;
+  background-color: #fff;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.autocomplete-suggest .ac-result ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.autocomplete-suggest .ac-result li {
+  padding: 10px;
+  border-top: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+.autocomplete-suggest .ac-result li:hover {
+  background-color: #f0f0f0;
+}
+.autocomplete-suggest .ac-result li.focused {
+  background-color: #f0f0f0;
+}
+.autocomplete-suggest .ac-result li:last-child {
+  border-bottom: none;
+}
+
+/* Screen size between 320px and 359px */
+@media all and (min-width: 320px) and (max-width: 359px) {
+  .autocomplete-search, .autocomplete-suggest {
+    width: 90%;
+  }
+  .autocomplete-suggest .ac-result {
+    margin: 0 0 0 65px;
+  }
+  .autocomplete-search label {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  .autocomplete-search input {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+/* Screen size between 360px and 400px */
+@media all and (min-width: 360px) and (max-width: 400px) {
+  .autocomplete-search, .autocomplete-suggest {
+    width: 80%;
+  }
+  .autocomplete-suggest .ac-result {
+    margin: 0 0 0 70px;
+  }
+  .autocomplete-search label {
+    font-size: 15px;
+    margin: 0 8px;
+  }
+  .autocomplete-search input {
+    font-size: 15px;
+    padding: 9px;
+  }
+}
+/* Screen size between 401px and 480px */
+@media all and (min-width: 401px) and (max-width: 480px) {
+  .autocomplete-search, .autocomplete-suggest {
+    width: 70%;
+  }
+  .autocomplete-suggest .ac-result {
+    margin: 0 0 0 70px;
+  }
+  .autocomplete-search label {
+    font-size: 15px;
+    margin: 0 8px;
+  }
+  .autocomplete-search input {
+    font-size: 15px;
+    padding: 9px;
+  }
+}/*# sourceMappingURL=autocomplete.component.css.map */
